@@ -1,38 +1,24 @@
-# create-svelte
+# crud-app-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+The smallest honest SvelteKit CRUD: enough to show routing, data loading and component reuse, and nothing more.
 
-## Creating a project
+## What it covers
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Dynamic routes** — `src/routes/post/[id]/+page.svelte` with its own `+page.ts`.
+- **Universal load functions** — data fetched in `+page.ts` so it runs on the server for the first paint and on the client for subsequent navigations.
+- **Two reusable components** — `Table.svelte` for the list, `Dialog.svelte` for create/edit, both driven by props rather than global state.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Stack
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+SvelteKit · Svelte · TypeScript · Vite
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Run it
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm install
+pnpm dev        # localhost:5173
 ```
 
-## Building
+## Status
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+A learning reference, and complete as one. If you want a full-stack SvelteKit app, look at [roda-belem](https://github.com/micaelcf/roda-belem); if you want a CRUD API, [stash-task](https://github.com/micaelcf/stash-task).
